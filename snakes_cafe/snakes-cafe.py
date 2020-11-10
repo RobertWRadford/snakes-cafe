@@ -24,8 +24,9 @@ while response != 'Quit':
 	if response != 'Quit':
 		if response in menuItems:
 			menuItems[response]+=1
-			quantity = 'orders have' if menuItems[response] > 1 else 'order has'
-			print(f'** {menuItems[response]} {quantity} of {response} been added to your meal **')
+			quantity = 'orders' if menuItems[response] > 1 else 'order'
+			grammar = 'have' if menuItems[response] > 1 else 'has'
+			print(f'** {menuItems[response]} {quantity} of {response} {grammar} been added to your meal **')
 		else:
 			print(f'** Apologies but we don\'t sell {response} here. **')
 print('** Your order is as follows: **')
